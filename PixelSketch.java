@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class PixelSketch extends JFrame {
     private DrawArea drawArea;
-    private JButton colorButton, clearButton, saveButton;
+    private JButton colorbtn, clearbtn, savebtn;
     private Color currentColor = Color.BLACK;
 
     public PixelSketch() {
@@ -25,20 +25,20 @@ public class PixelSketch extends JFrame {
         panel.setLayout(new FlowLayout());
         panel.setBackground(new Color(230, 230, 230));
 
-        colorButton = new JButton("Choose Color");
-        clearButton = new JButton("Clear");
-        saveButton = new JButton("Save Drawing");
+        colorbtn = new JButton("Choose Color");
+        clearbtn = new JButton("Clear");
+        savebtn = new JButton("Save Drawing");
 
-        panel.add(colorButton);
-        panel.add(clearButton);
-        panel.add(saveButton);
+        panel.add(colorbtn);
+        panel.add(clearbtn);
+        panel.add(savebtn);
 
         add(panel, BorderLayout.SOUTH);
 
         // Button Actions
-        colorButton.addActionListener(e -> chooseColor());
-        clearButton.addActionListener(e -> drawArea.clear());
-        saveButton.addActionListener(e -> drawArea.saveImage());
+        colorbtn.addActionListener(e -> chooseColor());
+        clearbtn.addActionListener(e -> drawArea.clear());
+        savebtn.addActionListener(e -> drawArea.saveImage());
 
         setVisible(true);
     }
